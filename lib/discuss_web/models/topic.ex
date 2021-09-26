@@ -1,5 +1,8 @@
 defmodule Discuss.Topic do
-  use DiscussWeb, :model
+  # use DiscussWeb, :model
+  use Ecto.Schema
+  import Ecto.Changeset
+  alias Discuss.Topic
 
   schema "topics" do
     field :title, :string
@@ -8,6 +11,6 @@ defmodule Discuss.Topic do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:title])
-    |> validate_require([:title])
+    |> validate_required([:title])
   end
 end
