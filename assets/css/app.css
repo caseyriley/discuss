@@ -87,3 +87,17 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.invalid-feedback {
+  color: red;
+  text-transform: capitalize;
+  position: absolute;
+  top: 57px;
+}
+
+
